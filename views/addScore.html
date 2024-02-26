@@ -1,0 +1,93 @@
+<div style="text-align: center;">
+    <nav class="navbar navbar-light navbar-expand-md" style="background-color: #000; color: #aaa;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">RMS</a><button data-bs-toggle="collapse" class="navbar-toggler"
+                data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span
+                    class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-center" style="padding-left: 30%;">
+                <h5 class="text-center">Result Management System</h5>
+            </div>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navcol-1"
+                style="padding-left: 10%;">
+                <button class="btn btn-warning" type="button" href="/">LOGOUT</button>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<!------------------------------------------------ Start: Hero Clean Reverse ----------------------------------------------------------------->
+
+
+    <div style="position: relative">
+
+        <div class="row">
+
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-start mt-2" id="navcol-1"
+                    style="position:absolute; padding-left: 5%;">
+                    <a class="btn btn-outline-danger" type="button" href="/teacher-index">Go Back</a>
+                </div>
+
+            <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+                <div class="card auth">
+
+                    <h6 class="text-center">Add Result</h6>
+
+                    <div class="card-body result-card">
+
+                        <form action="/teacher-index/addScore" method="post">
+                            <div class="row text-center pt-2">
+                                <div class="col-sm-3 mt-2">
+                                    <label for="roll">Roll No : </label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="number" name="roll" class="form-control" placeholder="108">
+                                </div>
+                            </div>
+
+                            <div class="row text-center pt-4">
+                                <div class="col-sm-3 mt-2">
+                                    <label for="name">Name : </label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" name="name" class="form-control" placeholder="John Doe">
+                                </div>
+                            </div>
+
+                            <div class="row text-center pt-4">
+                                <div class="col-sm-3 mt-2">
+                                    <label for="dob">D.O.B : </label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="date" name="dob" class="form-control" placeholder="2002-08-29">
+                                </div>
+                            </div>
+
+                            <div class="row text-center pt-4">
+                                <div class="col-sm-3 mt-2">
+                                    <label for="score">Score : </label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" name="score" class="form-control" placeholder="88">
+                                </div>
+                            </div>
+
+                            <div class="row pt-4">
+                                <div class="col-sm-2">
+                                </div>
+                                <div class="col-sm-5">
+                                    <button type="submit" class="btn btn-success pr-4 pl-4">Add</button>
+                                </div>
+                                <div class="col-sm-5">
+                                    <button type="submit" class="btn btn-danger pr-4 pl-4">Clear</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

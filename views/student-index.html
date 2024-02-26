@@ -1,0 +1,146 @@
+<div style="text-align: center;">
+    <nav class="navbar navbar-light navbar-expand-md" style="background-color: #ccc;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-dark" href="#">RMS</a><button data-bs-toggle="collapse" class="navbar-toggler"
+                data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span
+                    class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-center" style="padding-left: 30%;">
+                <h5 class="text-center text-dark">Result Management System</h5>
+            </div>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navcol-1"
+                style="padding-left: 10%;">
+                <a href="/" class="btn btn-warning">LOGOUT</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<!------------------------------------------------ Start: Hero Clean Reverse ----------------------------------------------------------------->
+
+
+<div style="position: relative">
+
+    <div class="row">
+
+        <div class="col-md-4 offset-md-4">
+
+            <div class="card auth">
+                <h6 class="text-center">Find result</h6>
+                <div class="card-body search-card">
+
+                    <form action="/student-index/findScore" method="post">
+                        <div class="row text-center pt-2">
+                            <div class="col-sm-4 mt-2">
+                                <label for="email">ROLL NO : </label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" name="roll" class="form-control" placeholder="198">
+                            </div>
+                        </div>
+
+                        <div class="row text-center pt-4 pb-4">
+                            <div class="col-sm-4 mt-2">
+                                <label for="email">D.O.B : </label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="date" name="dob" class="form-control" placeholder="2002-08-29">
+                            </div>
+                        </div>
+
+                        <div class="row pt-4">
+                            <div class="col-sm-2">
+                            </div>
+                            <div class="col-sm-5">
+                                <button type="submit" class="btn btn-success pr-4 pl-4">Search</button>
+                            </div>
+                            <div class="col-sm-5">
+                                <button type="submit" class="btn btn-danger pr-4 pl-4">Clear</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------------------------------------------------ Start: Hero Clean Reverse ----------------------------------------------------------------->
+
+{{#if score.dataValues.roll}}
+<div class="pb-4" style="position: relative; top:30px">
+
+    <div class="row">
+
+        <div class="col-md-4 ml-4" style="position: relative; left:31.5%">
+
+            <div class="card auth">
+                <div class="card-body search-card">
+                    <div class="auth-avatar">
+                        <img src="/img/person.png" alt="user" class="user-image">
+                    </div>
+                    <form>
+                        <div class="row text-left pt-2">
+                            <div class="col-sm-5 mt-1">
+                                <label for="email">Roll No </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="email"> : </label>
+                            </div>
+                            <div class="col-sm-5">
+                                <label>{{score.dataValues.roll}}</label>
+                            </div>
+                        </div>
+
+                        <div class="row text-left pt-2">
+                            <div class="col-sm-5 mt-1">
+                                <label for="email">Name </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="email"> : </label>
+                            </div>
+                            <div class="col-sm-5">
+                                <label>{{score.dataValues.name}}</label>
+                            </div>
+                        </div>
+
+                        <div class="row text-left pt-2">
+                            <div class="col-sm-5 mt-1">
+                                <label for="email">D.O.B </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="email"> : </label>
+                            </div>
+                            <div class="col-sm-5">
+                                <label>{{score.dataValues.dob}}</label>
+                            </div>
+                        </div>
+
+                        <div class="row text-left pt-2 pb-2">
+                            <div class="col-sm-5 mt-1">
+                                <label for="email">Score </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="email"> : </label>
+                            </div>
+                            <div class="col-sm-5">
+                                <label>{{score.dataValues.score}}</label>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{else if message}}
+<div class="mt-2">
+    <h6 class="text-center" style="color: red;">{{ message }}</h6>
+</div>
+{{/if}}

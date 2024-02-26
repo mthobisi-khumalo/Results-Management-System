@@ -1,0 +1,32 @@
+<div style="position: relative; top:70px"><!-- Start: Hero Clean Reverse -->
+    <div class="row">
+        <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+            <div class="card auth">
+                <div class="card-body auth-card">
+                    <div class="auth-avatar">
+                        <img src="/img/person.png" alt="user" class="user-image">
+                    </div>
+
+                    <form action="/teacher-index" method="post">
+
+                        <div class="form-group">
+                            <label for="role">Role : </label>
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="inputGroupSelect01" name="role">
+                                    <option value="teacher">Teacher</option>
+                                    <option value="student">Student</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <input type="submit" class="btn btn-dark pr-5 pl-5" value="Login">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <h6 class="text-center" style="color: red;">{{message}}</h6>
+</div>
